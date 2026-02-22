@@ -1,3 +1,49 @@
+.question-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px; /* Vertical space to separate the zones */
+    perspective: 1000px;
+}
+
+.thought-bubble {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 30px;
+    padding: 25px 35px;
+    max-width: 500px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: #444;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    line-height: 1.6;
+    animation: float 6s ease-in-out infinite;
+    white-space: pre-wrap; /* This preserves \n and wraps text naturally */
+}
+
+/* The "Floating" Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* The little tail of the thought bubble */
+.thought-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    transform: translateX(-50%) rotate(45deg);
+}
+
 .danger-card {
     margin-top: 200px; /* The "Lot of Vertical Space" */
     border: 1px solid #8b0000;
