@@ -21,6 +21,19 @@
     line-height: 1.6;
     animation: float 6s ease-in-out infinite;
     white-space: pre-wrap; /* This preserves \n and wraps text naturally */
+
+    /* NEW: Prevent vertical runaway */
+    max-height: 70vh; /* Limits height to 70% of the screen */
+    overflow-y: auto; /* Adds a scrollbar only when needed */
+    
+    /* NEW: Improve scrollbar styling for the 'Oxford' look */
+    scrollbar-width: thin;
+    scrollbar-color: #e0e0e0 transparent;
+}
+
+/* Optional: Stop the floating on hover so the user can read steadily */
+.thought-bubble:hover {
+    animation-play-state: paused;
 }
 
 /* The "Floating" Animation */
@@ -30,18 +43,18 @@
     100% { transform: translateY(0px); }
 }
 
-/* The little tail of the thought bubble */
-.thought-bubble::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    background: white;
-    border-right: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
-    transform: translateX(-50%) rotate(45deg);
+.thought-bubble.locked {
+    cursor: default;         /* Changes the pointer back to a normal arrow */
+    animation: none;         /* Optional: Stop the floating to signify it's 'anchored' */
+    box-shadow: none;        /* Optional: Flatten the shadow to show it's no longer 'active' */
+    border-color: #f0f0f0;   /* Fades the border slightly */
+}
+
+/* IMPORTANT: If you want them to still be able to SCROLL inside 
+   the bubble but not trigger the CLICK again, use this instead: */
+.thought-bubble.locked {
+    cursor: default;
+    /* Do NOT use pointer-events: none; if you need to scroll internal text! */
 }
 
 .danger-card {

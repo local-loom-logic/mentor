@@ -1,9 +1,6 @@
-import { MODEL_URL, FILENAME } from "./model-details";
-import { updateStatus } from "./utils";
-import { COLOR_ERROR_RED, COLOR_PROGRESS_PURPLE, COLOR_SUCCESS_GREEN } from "./colors";
-
 import { updateStorageDisplay, checkPresence, fetchFullGemma, deleteGemma } from "./model-storage";
-import { clickBubble } from "./chat";
+import { clickBubble1 } from "./chat";
+import { enableGemma } from "./model-details";
 
 // js/main.js
 console.log("LLLM: Logic initialized.");
@@ -11,8 +8,15 @@ console.log("LLLM: Logic initialized.");
 document.addEventListener('DOMContentLoaded', () => {
     setupUIListenerButtons()
 
-    updateStorageDisplay();
-    checkPresence();
+    if (enableGemma) {
+        const storageInfo = document.getElementById('storage-info') as HTMLDivElement;
+        storageInfo!.style.display = 'block';
+        const downloadZone = document.getElementById('download-zone') as HTMLDivElement;
+        downloadZone!.style.display = 'block';
+        updateStorageDisplay();
+        checkPresence();
+    }
+    
     // initMentor()
 });
 
@@ -22,7 +26,7 @@ function setupUIListenerButtons() {
     const deleteButton = document.getElementById('btn-delete') as HTMLButtonElement;
     deleteButton?.addEventListener('click', deleteGemma);
 
-    const bubble = document.getElementById('thought-bubble') as HTMLDivElement;
-    bubble?.addEventListener('click', clickBubble);
+    const bubble1 = document.getElementById('thought-bubble-1') as HTMLDivElement;
+    bubble1?.addEventListener('click', clickBubble1, { once: true });
 
 }
