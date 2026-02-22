@@ -53,11 +53,12 @@
     border-color: #f0f0f0;   /* Fades the border slightly */
 }
 
-/* IMPORTANT: If you want them to still be able to SCROLL inside 
-   the bubble but not trigger the CLICK again, use this instead: */
-.thought-bubble.locked {
-    cursor: default;
-    /* Do NOT use pointer-events: none; if you need to scroll internal text! */
+/* Style for the second 'Invite' bubble to make it look like a conclusion */
+.cta-bubble {
+    background: #fdfdfd;
+    border: 1px dashed #ccc; /* Dashed line suggests an 'Open' thread */
+    font-style: normal;
+    animation: none; /* No floating for the CTA to keep it grounded */
 }
 
 .danger-card {
