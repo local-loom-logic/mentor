@@ -1,5 +1,6 @@
 .question-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 60px 20px; /* Vertical space to separate the zones */
@@ -29,6 +30,8 @@
     /* NEW: Improve scrollbar styling for the 'Oxford' look */
     scrollbar-width: thin;
     scrollbar-color: #e0e0e0 transparent;
+
+    margin-bottom: 20px;
 }
 
 /* Optional: Stop the floating on hover so the user can read steadily */

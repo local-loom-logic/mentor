@@ -77,4 +77,6 @@ He closed the magazine, the glossy cover reflecting his own slightly troubled ga
 export async function clickBubble1() {
     console.log("clickBubble1")
     await writeResponseToBubble('thought-bubble-1', response1)
+    const bubble2 = document.getElementById("thought-bubble-2") as HTMLDivElement;
+    bubble2!.style.display = "block"
 }
