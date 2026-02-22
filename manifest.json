@@ -1,0 +1,11 @@
+{
+    "name": "Local Loom Logic: Mentor",
+    "short_name": "LLLM",
+    "start_url": "/local-loom-logic-mentor/",
+    "display": "standalone",
+    "background_color": "#f4f1ea",
+    "description": "A private, local-first sanctuary for bicultural identity.",
+    "icons": [
+      { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }
+    ]
+}
