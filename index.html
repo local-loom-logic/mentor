@@ -9,6 +9,8 @@
     
     <script src="js/main.js" defer></script>
     
+    <link rel="stylesheet" href="css/style.css">
+
     <style>
         body {
             font-family: 'Georgia', serif; /* Prestigious, readable */
@@ -34,8 +36,28 @@
     </header>
 
     <main id="app">
-        <p>Preparing your local sanctuary...</p>
-        <div id="status">Initializing Logic...</div>
+        <div id="storage-info">Checking storage...</div>
+        
+        <div id="download-zone">
+            <progress id="progress-bar" value="0" max="100" style="width: 80%;"></progress>
+            <p id="status">Click the button below to start download</p>
+            <button id="btn-download" onclick="fetchFullGemma()">Download Gemma (5.2GB)</button>
+        </div>
+    
+        <div id="manage-zone" style="display:none;">
+            <div class="success-header">
+                <p>✅ <b>Mentor Status:</b> Local Logic Secured</p>
+            </div>
+        
+            <div class="danger-card">
+                <h3>Danger Zone</h3>
+                <p>Deleting the local weights will remove the Mentor's brain from this device. You will need to re-weave (download) the data to use the logic offline again.</p>
+                
+                <button id="btn-delete" onclick="deleteGemma()">
+                    Purge Local Weights
+                </button>
+            </div>
+        </div>
     </main>
 
 </body>

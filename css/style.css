@@ -1,0 +1,39 @@
+.danger-card {
+    margin-top: 200px; /* The "Lot of Vertical Space" */
+    border: 1px solid #8b0000;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff5f5; /* Very subtle red tint */
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.danger-card h3 {
+    color: #8b0000;
+    margin-top: 0;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.danger-card p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#btn-delete {
+    background: none;
+    border: 1px solid #8b0000;
+    color: #8b0000;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    transition: all 0.3s ease;
+}
+
+#btn-delete:hover {
+    background-color: #8b0000;
+    color: white;
+}
