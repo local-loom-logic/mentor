@@ -1,4 +1,4 @@
-import { FILENAME, MODEL_URL } from "./model-details";
+import { GEMMA_FILENAME, MODEL_URL } from "./model-details";
 import { updateStatus } from "./utils";
 import { COLOR_ERROR_RED, COLOR_PROGRESS_PURPLE, COLOR_SUCCESS_GREEN } from "./colors";
 
@@ -49,7 +49,7 @@ export async function fetchFullGemma() {
         
         // Open the Loom for writing
         const root = await navigator.storage.getDirectory();
-        const fileHandle = await root.getFileHandle(FILENAME, { create: true });
+        const fileHandle = await root.getFileHandle(GEMMA_FILENAME, { create: true });
         const writable = await fileHandle.createWritable();
 
         let receivedLength = 0;
@@ -81,7 +81,7 @@ export async function fetchFullGemma() {
 export async function deleteGemma() {
     if (confirm("Are you sure you want to delete the local weights? (1/3)") && confirm("Are you really sure? (2/3) -- it's a big file!") && confirm("Are you really really sure? (3/3) -- it's a big file!") ) {
         const root = await navigator.storage.getDirectory();
-        await root.removeEntry(FILENAME);
+        await root.removeEntry(GEMMA_FILENAME);
         alert("Local weights deleted.");
         checkPresence();
     }
@@ -89,7 +89,7 @@ export async function deleteGemma() {
 
 // 4. Presence Check (UI Switch)
 export async function checkPresence() {
-    const exists = await isModelLocallyAvailable(FILENAME); // Your previous Gatekeeper function
+    const exists = await isModelLocallyAvailable(GEMMA_FILENAME); // Your previous Gatekeeper function
     document.getElementById('download-zone')!.style.display = exists ? 'none' : 'block';
     document.getElementById('manage-zone')!.style.display = exists ? 'block' : 'none';
     if (exists) {

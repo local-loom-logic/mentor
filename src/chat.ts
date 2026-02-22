@@ -1,4 +1,5 @@
-import { FILENAME } from "./model-details";
+import { consultTheMentor } from "./engine";
+import { GEMMA_FILENAME } from "./model-details";
 import { isModelLocallyAvailable } from "./model-storage";
 
 
@@ -27,7 +28,7 @@ async function typeWriter(text: string, element: HTMLElement, overwrite: boolean
 
 export async function clickBubble() {
     const bubble = document.getElementById('thought-bubble') as HTMLDivElement;
-    const exists = await isModelLocallyAvailable(FILENAME)
+    const exists = await isModelLocallyAvailable(GEMMA_FILENAME)
     if (!exists) {
         bubble.innerText = "The Mentor is still weaving... Please wait for the download.";
         return;
@@ -40,20 +41,16 @@ export async function clickBubble() {
     try {
         const originalQuestion = "How do I navigate my complex, inter-generational identity in a shifting geopolitical landscape?"
         // Example prompt based on your question
-        const prompt = `As a mentor, give a short, wise response to: ${originalQuestion}`;
-        
-        // This is where you call your actual model (e.g., WebLLM)
-        // const reply = await engine.chat.completions.create({ 
-        //    messages: [{ role: "user", content: prompt }] 
-        // });
-        // const responseText = reply.choices[0].message.content;
+        const prompt = `As a mentor, give a short, wise response to: ${originalQuestion}`;    
 
-        const responseText = "\n" + "Navigation requires a sturdy anchor in your own values, even as the tides of history pull at your roots. Your identity is not a conflict to be solved, but a loom to be woven.";
+        let responseText = await consultTheMentor(prompt);
+        responseText = "\n" + responseText
 
         bubble.style.opacity = "1";
         await typeWriter(responseText, bubble, false);
         
     } catch (err) {
         bubble.innerText = "The local logic encountered an error. Ensure WebGPU is enabled.";
+        console.log(err)
     }
 }

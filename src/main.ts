@@ -1,4 +1,4 @@
-import { MODEL_URL, FILENAME } from "./model-details";
+import { MODEL_URL, GEMMA_FILENAME } from "./model-details";
 import { updateStatus } from "./utils";
 import { COLOR_ERROR_RED, COLOR_PROGRESS_PURPLE, COLOR_SUCCESS_GREEN } from "./colors";
 
