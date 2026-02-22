@@ -1,27 +1,29 @@
 import { CreateMLCEngine } from "@mlc-ai/web-llm";
-import { GEMMA_FILENAME } from "./model-details";
+import { myGemmaModelID } from "./model-details";
+
+import { prebuiltAppConfig } from "@mlc-ai/web-llm";
+
+// 1. Find the official Gemma record
+const officialGemmaRecord = prebuiltAppConfig.model_list.find(
+    m => m.model_id === "gemma-2b-it-q4f16_1-MLC"
+);
+
+if (!officialGemmaRecord) {
+    throw new Error("Gemma was not found in the official archives.");
+}
 
 export async function consultTheMentor(userPrompt: string) {
-
-    const root = await navigator.storage.getDirectory();
-    const fileHandle = await root.getFileHandle(GEMMA_FILENAME);
-    const file = await fileHandle.getFile();
-
-    // 2. Create a local Object URL (This IS a valid URL format)
-    const modelObjectURL = URL.createObjectURL(file);
-    console.log("URL", modelObjectURL)
-
-    const myGemmaModelID = "my-gemma-2b-it"
+    console.log("Starting to consult Gemma...")
     // 1. Point to your local OPFS-hosted binary
     const modelConfig = {
         model: myGemmaModelID, // The model family
         model_list: [
             {
-                "model": "./gemma-config.json",
+                "model": `${window.location.origin}/gemma-config.json`, // This gets intercepted by service worker
                 "model_id": myGemmaModelID,
                 // In 2026, engines accept "opfs://" or "local://" schemes
-                "model_url": modelObjectURL,
-                model_lib: "https://raw.githubusercontent.com/mlc-ai/binary-mlc-llm-libs/main/web-data/gemma-2b-it-q4f16_1-v1-webgpu.wasm",
+                "model_url": "https://huggingface.co/mlc-ai/gemma-2b-it-q4f16_1-MLC", // This gets intercepted by service worker
+                model_lib: officialGemmaRecord!.model_lib,
                 "overrides": { "context_window_size": 8192 }
             }
         ]
