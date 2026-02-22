@@ -1,0 +1,19 @@
+{
+  "name": "mentor",
+  "version": "1.0.0",
+  "description": "The Local Loom Logic Mentor (LLLM) – A private, local-first sanctuary for bicultural identity.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild src/main.ts --bundle --outfile=dist/main.js --minify",
+    "watch": "esbuild src/main.ts --bundle --outfile=dist/main.js --watch",
+    "serve": "python -m http.server 8866"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.27.3",
+    "typescript": "^5.9.3"
+  }
+}

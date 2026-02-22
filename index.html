@@ -7,8 +7,8 @@
     
     <link rel="manifest" href="manifest.json">
     
-    <script src="js/main.js" defer></script>
-    
+    <script src="dist/main.js" defer></script>
+
     <link rel="stylesheet" href="css/style.css">
 
     <style>
@@ -41,7 +41,7 @@
         <div id="download-zone">
             <progress id="progress-bar" value="0" max="100" style="width: 80%;"></progress>
             <p id="status">Click the button below to start download</p>
-            <button id="btn-download" onclick="fetchFullGemma()">Download Gemma (5.2GB)</button>
+            <button id="btn-download">Download Gemma (2 GB)</button>
         </div>
     
         <div id="manage-zone" style="display:none;">
@@ -53,7 +53,7 @@
                 <h3>Danger Zone</h3>
                 <p>Deleting the local weights will remove the Mentor's brain from this device. You will need to re-weave (download) the data to use the logic offline again.</p>
                 
-                <button id="btn-delete" onclick="deleteGemma()">
+                <button id="btn-delete">
                     Purge Local Weights
                 </button>
             </div>
