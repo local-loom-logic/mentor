@@ -79,4 +79,5 @@ export async function clickBubble1() {
     await writeResponseToBubble('thought-bubble-1', response1)
     const bubble2 = document.getElementById("thought-bubble-2") as HTMLDivElement;
     bubble2!.style.display = "block"
+    bubble2.scrollIntoView({ behavior: 'smooth' });
 }
