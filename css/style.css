@@ -61,6 +61,23 @@
     animation: none; /* No floating for the CTA to keep it grounded */
 }
 
+/* Styling the "Inquiry" (The italics) */
+.cta-bubble i {
+    display: block;
+    color: #888;
+    margin-bottom: 15px;
+    border-left: 2px solid #cc0000; /* A 'Red Thread' of inquiry */
+    padding-left: 15px;
+    font-family: "Georgia", serif;
+}
+
+/* Styling the "Transmission" link */
+.cta-bubble a {
+    color: #cc0000;
+    text-decoration: underline dotted;
+    font-weight: bold;
+}
+
 .danger-card {
     margin-top: 200px; /* The "Lot of Vertical Space" */
     border: 1px solid #8b0000;
