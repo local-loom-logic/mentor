@@ -27,13 +27,13 @@ async function fetchModelChunk(filename) {
   }
 
 async function testChunk() {
-    const filename = "mentor-model-gemma.bin";
+    const filename = "mosaic-model-gemma.bin";
     const exists = await isModelLocallyAvailable(filename);
 
     if (exists) {
         updateStatus("Local Logic Secured. Ready to weave.", COLOR_SUCCESS_GREEN);
     } else {
-        updateStatus("Weaving your local mentor (First-time setup)...", COLOR_ERROR_RED);
+        updateStatus("Weaving your local mosaic (First-time setup)...", COLOR_ERROR_RED);
         await fetchModelChunk(filename); // Your existing download function
     }
 }

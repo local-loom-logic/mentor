@@ -30,12 +30,12 @@ export async function writeResponseToBubble(bubbleId, response) {
     if (enableGemma) {
         const exists = await isModelLocallyAvailable(FILENAME)
         if (!exists) {
-            bubble.innerText = "The Mentor is still weaving... Please wait for the download.";
+            bubble.innerText = "The Mosaic is still weaving... Please wait for the download.";
             return;
         }
     }    
 
-    // Visual feedback that the Mentor is "thinking"
+    // Visual feedback that the Mosaic is "thinking"
     bubble.style.opacity = "0.6";
     // bubble.innerText = "Consulting local logic...";
 

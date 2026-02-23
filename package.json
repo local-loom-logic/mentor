@@ -1,7 +1,7 @@
 {
-  "name": "mentor",
+  "name": "mosaic",
   "version": "1.0.0",
-  "description": "The Local Loom Logic Mentor (LLLM) – A private, local-first sanctuary for bicultural identity.",
+  "description": "The Local Loom Logic Mosaic (LLLM) – A private, local-first sanctuary for bicultural identity.",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
