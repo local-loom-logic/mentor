@@ -7,6 +7,47 @@
     perspective: 1000px;
 }
 
+/* The container for the indicator */
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    opacity: 0.8;
+    animation: fadePulse 2s infinite ease-in-out;
+}
+
+/* The "Click to unravel" text */
+.arrow-text {
+    font-family: "Georgia", serif;
+    font-size: 0.8rem;
+    color: #cc0000;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* The actual arrow */
+.red-arrow {
+    color: #cc0000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: bounce 2s infinite;
+}
+
+/* Subtle floating animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-5px);}
+    60% {transform: translateY(-3px);}
+}
+
+/* Subtle fade in/out so it's not distracting */
+@keyframes fadePulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
 .thought-bubble {
     position: relative;
     background: #ffffff;
