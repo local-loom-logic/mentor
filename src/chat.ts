@@ -51,27 +51,25 @@ export async function writeResponseToBubble(bubbleId, response) {
 }
 
 const response1 = `
-The recycled air in the Oakland café hummed, a predictable drone punctuated by the clatter of ceramic and the low murmur of morning conversations. Ethan, nursing a lukewarm matcha latte, traced a finger across the glossy page of The Economist. The date, he noted with a familiar pang, was February 22, 2026. The headline, stark and uncompromising, read: "The Great Firewall of Democracy: Harris Doubles Down on Digital Containment."
+The library was a tomb of silent logic, but for Ethan, the air felt thick with a friction he couldn't name. He sat across from Mei, their laptops humming like two small engines in a vast, cold hangar. Between them lay a discarded copy of a geopolitical quarterly, its cover depicting a digital globe fracturing into two distinct, jagged halves.
 
-He adjusted his glasses, a habit he’d picked up during the tense COVID years, and dove into the analysis. The article detailed President Harris's recent State of the Union address, where she had, predictably, doubled down on the "generational struggle" against Beijing. "No nation," the piece quoted her, "will out-innovate America, nor will any autocratic regime dictate the terms of the 21st-century digital commons."
+Ethan leaned over, staring at a map of the Pacific. A bold, crimson line had been drawn through the South China Sea, labeled simply: Decoupling Zone.
 
-Ethan sighed, a soft exhalation that no one else in the bustling café would notice. He understood the logic, intellectually. His graduate work in AI ethics had shown him the stark differences in data governance, the diverging paths of surveillance and privacy. He knew the arguments for "de-risking," for technological sovereignty, for pushing back against IP theft.
+The text below it was clinical, written by someone who viewed the world as a game of Go. It spoke of "supply chain resilience," "strategic autonomy," and "the necessary pruning of cultural exchange." To the author, these were variables in a grand calculation for 2026.
 
-But knowing didn't make it feel any less constricting.
+But to Ethan, the crimson line looked like a surgical incision.
 
-The article went on to praise the administration's swift action against a recent "Beijing-linked cyberattack" on critical infrastructure, swiftly followed by new sanctions targeting Chinese tech giants and stricter export controls on advanced AI chips. Ethan’s eyes drifted to a small sidebar: "The New Loyalty Test: Scrutiny Intensifies for Dual-Use Research."
+"I feel like I'm being divided by zero," he whispered, sliding the journal toward Mei.
 
-He thought of his cousin, Mei, a brilliant materials scientist at Stanford. A few months ago, she’d been quietly pulled from a major government grant, cited only as "potential conflict of interest due to extensive familial ties abroad." Mei, born and raised in Cupertino, had been devastated. She had no political affiliations, no nefarious intent, just grandparents in Shenzhen whom she visited every other year.
+Mei didn't look up immediately. She was staring at her own reflection in the darkened window, where the library lights made her look like a ghost haunting the campus. "It’s the cognitive tax, Ethan," she said softly. "The more they talk about 'de-risking,' the more I feel like I'm the risk. My family, my language, the way I think—it’s all being categorized as a liability."
 
-Ethan knew, too, that the anti-Asian hate he’d seen during the pandemic had largely receded from public discourse. The Harris administration had been unequivocal in condemning xenophobia, in strengthening federal protections. He felt safe walking these streets, felt like the government was, at least outwardly, on his side. Yet, this "institutional Cold War" felt like a slow, insidious chill.
+She traced the crimson line on the page with her fingernail. "On one side of this line, I’m a 'model minority' whose loyalty is under a microscope. On the other side, I’m a 'sea turtle' who has been tainted by the West. There is no 'Us' on this map. There is only 'Side A' and 'Side B.' We are just the noise in the data."
 
-He scrolled through his phone, an unconscious habit, pausing on an old photo. It was from his last trip to Shanghai, 2019. His 外婆/waipo (maternal grandmother) was beaming, holding a steaming bowl of 小笼包/xiaolongbao (juicy bun). He remembered the chaotic energy of the city, the impossible rush of humanity, the smell of street food, the feeling of being utterly anonymous yet utterly connected to something ancient.
+Ethan looked back at the map. The author of the article would never know that this "strategic pivot" felt like a physical tearing in a student’s chest. The "High Achiever" in him wanted to find a way to "win" at this new reality, to optimize his identity for the era of suspicion. But the Sovereign part of him knew that the only way to survive was to stop being a variable.
 
-Now, a trip back felt like navigating a minefield. His travel agent had warned him of increased scrutiny at customs, of potential delays in visa processing, of needing to "declare any and all digital devices." It wasn't about being denied entry, but about the unspoken assumption that every Chinese American was a potential vector, a soft target for influence or information.
+He closed the journal. The sound was a sharp thud in the silence of the stacks.
 
-He imagined the government's internal memos, the carefully crafted policies. Combat the CCP, not the Chinese people. A noble distinction, perhaps. But for him, sitting in this café, reading the sterile prose of The Economist, the line felt impossibly blurred. The Cold War wasn't just in the headlines or the halls of power; it was in the quiet scrutiny, the unasked questions, the subtle chill that seeped into the very fabric of his identity. He was American, yes. But in 2026, under President Harris's firm hand, being Chinese American felt less like a bridge and more like living on a border.
-
-He closed the magazine, the glossy cover reflecting his own slightly troubled gaze. He picked up his phone and typed a message to Mei: Want to grab dinner tonight? My treat. No politics, just good food. He knew, instinctively, that tonight, they would just talk about anything else. Anything but the news.
+"We aren't on their map," Ethan said, his voice gaining a sudden, quiet clarity. "So we have to draw our own."
 `
 
 export async function clickBubble1() {
